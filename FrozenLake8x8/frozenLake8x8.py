@@ -1,3 +1,7 @@
+""" Solving FrozenLake8x8 from OpenAI using Value Iteration
+
+    Author: Diganta Kalita  (digankate26@gmail.com) """
+
 import gym
 import numpy as np 
 
