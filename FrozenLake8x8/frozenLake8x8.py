@@ -44,9 +44,8 @@ def get_policy(env,stateValue, lmbda=0.9):
   return policy 
 
 
-def get_score(env, policy):
+def get_score(env, policy, episodes=1000):
   misses = 0
-  episodes = 1000
   steps_list = []
   for episode in range(episodes):
     observation = env.reset()
@@ -75,4 +74,4 @@ env = gym.make('FrozenLake8x8-v0')
 
 stateValues = value_iteration(env, max_iterations=100000)
 policy = get_policy(env, stateValues)
-get_score(env, policy)
+get_score(env, policy,episodes=1000)
